@@ -12,7 +12,6 @@ function cursorback(e){
     mouseCursor2.style.left = e.pageX + 'px';
 }
 
-
 function reveal() {
 var reveals = document.querySelectorAll(".reveal");
 
@@ -30,8 +29,6 @@ for (var i = 0; i < reveals.length; i++) {
 }
 
 window.addEventListener("scroll", reveal);
-
-
 
 const txtAnim = document.querySelector('.acceuil h1');
 

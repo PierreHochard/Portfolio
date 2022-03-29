@@ -24,7 +24,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    cursor: default;
+    cursor: none;
 }
 
 .acceuil h1{
@@ -54,15 +54,47 @@ body{
     color: black;
 }
 
-/*Audio*/
-.acceuil audio{
-    margin-top: 22%;
-    margin-left: 80%;
-    overflow: hidden;
+/*Page Principale*/
+
+/*Load Page*/
+
+.loader-container{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.loader{
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    color: #3498db;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loader 1.2s linear infinite;
+}
 
-/*Page Principale*/
+@keyframes loader{
+    25%{
+        color: #2ecc71;
+    }
+    50%{
+        color: #f1c40f;
+    }
+    75%{
+        color: #e74c3c;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
 /*Cursor*/
 
@@ -87,7 +119,11 @@ body{
     pointer-events: none;
     transition: all 0.1s ease;
     z-index: 10;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);   
+}
+
+.link-grow{
+    background-color: #e74c3c;
 }
 
 /*Nav bar*/
@@ -255,8 +291,10 @@ body{
 
 .container-P3 .Briquerie:hover, .container-P3 .INSA:hover, .container-P3 .TPS:hover{
     transform: scale(1.1);    
-    cursor:none;    
+    cursor:none;
+        
 }
+
 .container-P3 .Briquerie:hover{
     background-image: url("images/Formation1_BW.jpg");
 }
@@ -376,7 +414,7 @@ animation: fade-left 0.7s ease-in;
     display: block;
     width: 100%;
     text-align: center;
-    height: 500px;
+    height: fit-content;
 }
 
 .container-P6 .skill{
@@ -458,7 +496,7 @@ animation: fade-left 0.7s ease-in;
 .container-P7{
     display: block;
     text-align: center;
-    margin-top: 32%;
+    margin-top: 5%;
     height: 500px;
     width: 100%;
     color: white;
@@ -503,4 +541,125 @@ animation: fade-left 0.7s ease-in;
 
 *::-webkit-scrollbar-thumb:hover {
     background-color: rgb(194, 194, 194);
+}
+
+
+/*--Responsive--*/
+
+@media screen and (max-width : 1525px) {
+    .container-P3 .texte{
+        font-size: 0.8em;
+    }
+
+    .container-P3 {
+        margin: auto 10%;
+    }
+
+    .container-P4 .caroussel{
+        text-align: center;
+    }
+    .container-P4 .caroussel img{
+        float: none;
+        margin: 0;
+    }
+    .container-P4 .caroussel>*{
+        margin: 0;
+        text-align: center;
+    }
+    .container-P4 .caroussel p{
+        height: fit-content;
+        margin-bottom: 5%;
+    }
+
+}
+
+@media screen and (max-width : 1100px) {
+    .container-P3 {
+        margin: auto 5%;
+    }
+
+    .container-P2 h2{
+        padding-left: 0;
+        padding-right: 2%;
+    }
+
+
+}
+
+@media screen and (max-width : 950px) {
+    .container-P3 {
+        margin: auto 0;
+    }
+
+    
+}
+
+@media screen and (max-width : 880px) {
+
+    .container-P1{
+        text-align: center;
+        margin-top: 10%;
+        height: fit-content;
+    }
+
+    .container-P1 img{
+        height: 300px;
+        float: none;
+        left: auto;
+    }
+
+    .container-P1 .texteP1{
+        padding: 0;
+    }
+
+    .container-P2{
+        margin-top: 8%;
+    }
+
+    .container-P3 .descriptions{
+        display: block;
+    }
+
+    .container-P3 .Briquerie{
+        margin-top: 5%;
+    }
+
+    .container-P3 .TPS{
+        margin-bottom: 15%;
+    }
+
+    .container-P3 .Briquerie, .container-P3 .INSA, .container-P3 .TPS{
+        background-position: 50%;
+        clip-path: none;
+        height: 100px;
+    }
+
+    .container-P3 .Briquerie:hover, .container-P3 .INSA:hover, .container-P3 .TPS:hover{
+        transform: none;    
+        cursor:none;       
+    }    
+        
+    .container-P3 .Briquerie .texte, .container-P3 .INSA .texte, .container-P3 .TPS .texte{
+        background-color: rgb(144, 144, 144);
+        color: white;
+    }
+
+}
+
+@media screen and (max-width : 880px){
+    .container-P4 .caroussel img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-height : 880px) {
+    .container-P1 img{
+        height: 300px;
+    }
+    .container-P1{
+        height: 300px;
+    }
+
 }
