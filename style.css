@@ -783,11 +783,8 @@ animation: fade-right 0.7s ease-in;
         color: white;
     }
 
-
-
-
     .container-P4 .caroussel p{
-        font-size: small;
+        font-size: medium;
         text-align: justify;
     }
 
