@@ -107,6 +107,7 @@ body{
     transform: translate(-50%,-50%);
     pointer-events: none;
     z-index: 10;
+    
 }
 
 .cursorback{
@@ -120,6 +121,7 @@ body{
     transition: all 0.1s ease;
     z-index: 10;
     backdrop-filter: blur(2px);   
+    overflow: hidden;
 }
 
 .link-grow{
@@ -339,37 +341,39 @@ body{
     height: 200px;
 }
 
-.container-P4 .Gaggenau, .container-P4 .Boccard, .container-P4 .EDF {
-    text-align: left;
+.container-P4 .AGV, .container-P4 .Boccard, .container-P4 .EDF {
+    text-align: justify;
     margin-bottom: 5%;
 }
-.container-P4 .Gaggenau img, .container-P4 .Boccard img, .container-P4 .EDF img{
-    float: right;
-    margin-left: 10%;
+.container-P4 .AGV img, .container-P4 .Boccard img, .container-P4 .EDF img{
+    float: left;
+    margin-right: 10%;
     box-shadow: 0px 0px 20px 0px rgba(189,189,189,0.75);
+     
 }
 
-.container-P4 .AEP,  .container-P4 .Inde, .container-P4 .IBBL{
-    text-align: right;
+.container-P4 .Gaggenau, .container-P4 .AEP,  .container-P4 .Inde, .container-P4 .IBBL{
+    text-align: justify;
     margin-bottom: 5%;
 }
-.container-P4 .AEP img,  .container-P4 .Inde img, .container-P4 .IBBL img{
-    margin-right: 10%;
-    float: left;
-    box-shadow: 0px 0px 20px 0px rgba(189,189,189,0.75);    
+.container-P4 .Gaggenau img, .container-P4 .AEP img,  .container-P4 .Inde img, .container-P4 .IBBL img{
+    margin-left: 10%;
+    float: right;
+    box-shadow: 0px 0px 20px 0px rgba(189,189,189,0.75); 
+       
 }
 
 .reveal {
 opacity: 0;
 }
   
-.Gaggenau .reveal.active, .Boccard .reveal.active, .EDF .reveal.active {
-opacity: 1;
-animation: fade-right 0.7s ease-in;
-}
-.AEP .reveal.active, .Inde .reveal.active, .IBBL .reveal.active {
+.AGV .reveal.active, .Boccard .reveal.active, .EDF .reveal.active {
 opacity: 1;
 animation: fade-left 0.7s ease-in;
+}
+.Gaggenau .reveal.active, .AEP .reveal.active, .Inde .reveal.active, .IBBL .reveal.active {
+opacity: 1;
+animation: fade-right 0.7s ease-in;
 }
 
 
@@ -396,7 +400,7 @@ animation: fade-left 0.7s ease-in;
     display: block;
     width: 100%;
     text-align: center;
-    height: 500px;
+    height: fit-content;
 }
 
 .container-P5 .caroussel{
@@ -415,6 +419,7 @@ animation: fade-left 0.7s ease-in;
     width: 100%;
     text-align: center;
     height: fit-content;
+    margin-top: 4%;
 }
 
 .container-P6 .skill{
@@ -497,7 +502,7 @@ animation: fade-left 0.7s ease-in;
     display: block;
     text-align: center;
     margin-top: 5%;
-    height: 500px;
+    height: 350px;
     width: 100%;
     color: white;
     padding: 2%;
@@ -546,7 +551,8 @@ animation: fade-left 0.7s ease-in;
 
 /*--Responsive--*/
 
-@media screen and (max-width : 1525px) {
+
+@media screen and (max-width : 1700px) {
     .container-P3 .texte{
         font-size: 0.8em;
     }
@@ -571,6 +577,11 @@ animation: fade-left 0.7s ease-in;
         margin-bottom: 5%;
     }
 
+    .container-P5 .caroussel{
+        width: 80%;
+        margin-left: 10%;
+    }
+
 }
 
 @media screen and (max-width : 1100px) {
@@ -583,7 +594,6 @@ animation: fade-left 0.7s ease-in;
         padding-right: 2%;
     }
 
-
 }
 
 @media screen and (max-width : 950px) {
@@ -591,6 +601,9 @@ animation: fade-left 0.7s ease-in;
         margin: auto 0;
     }
 
+    .container-P5 img{
+        height: 150px;
+    }
     
 }
 
@@ -651,6 +664,24 @@ animation: fade-left 0.7s ease-in;
         width: 80%;
         height: auto;
     }
+
+    .container-P6 .skill .name{
+        font-size: 0.975em;
+    }
+
+    .container-P6 .skill .name span{
+        margin: 11.25px 0;
+        padding: 7.5px 15px;
+    }
+    
+    .container-P6 .skill .bar-container .bar{
+        width: 300px;
+        height: 22.5px;
+        margin: 36px 30px;
+    }
+    .container-P7 .footer .btn{
+        font-size: 1rem;
+    }
 }
 
 
@@ -660,6 +691,108 @@ animation: fade-left 0.7s ease-in;
     }
     .container-P1{
         height: 300px;
+    }
+
+}
+
+@media  screen and (max-aspect-ratio : 1/1) {
+
+    .cursor, .cursorback{
+        opacity: 0;
+    }
+
+    .acceuil h1{
+        padding-top: 40%;
+        width: 78%;
+    }
+
+    .acceuil .btn-container{
+        margin-top: 30%;
+    }
+    
+    .acceuil .btn{
+        margin-left: 13%;
+        margin-top: 10%;
+        padding: 10px 30px; 
+        font-size: 2rem;
+    }
+
+    .nav-bar{
+        height: 10rem;
+    }
+    .btn{
+        font-size:x-large;
+        text-align: center;
+    }
+
+    .container-P1{
+        margin-top: 25%;
+        text-align: left;
+        font-size: 34px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    .container-P2{
+        margin: 0;
+        width: 100%;
+        font-size: 34px;
+        text-align: center;
+    }
+    .container-P2 h2{
+        padding-right: 6%;
+    }
+
+    .container-P2 .liste{
+        background: none;
+    }
+
+    .container-P2 .bullet{
+        opacity: 0;
+    }
+
+    .container-P3 .descriptions{
+        display: block;
+        font-size: 34px;
+    }
+
+    .container-P3 .Briquerie{
+        margin-top: 5%;
+        margin-bottom: 30%;
+    }
+
+    .container-P3 .TPS{
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+
+    .container-P3 .Briquerie, .container-P3 .INSA, .container-P3 .TPS{
+        background-position: 50%;
+        clip-path: none;
+        height: 100px;
+    }
+
+    .container-P3 .Briquerie:hover, .container-P3 .INSA:hover, .container-P3 .TPS:hover{
+        transform: none;    
+        cursor:none;       
+    }    
+        
+    .container-P3 .Briquerie .texte, .container-P3 .INSA .texte, .container-P3 .TPS .texte{
+        background-color: rgb(144, 144, 144);
+        color: white;
+    }
+
+
+
+
+    .container-P4 .caroussel p{
+        font-size: small;
+        text-align: justify;
+    }
+
+    .container-P4 .caroussel div{
+        margin-top: 15%;
     }
 
 }
